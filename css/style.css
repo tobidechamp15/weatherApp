@@ -100,6 +100,13 @@ body {
 }
 
 @media screen and (max-width: 470px) {
+  body{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding-top: 250px; */
+    /* height: 100vh; */
+  }
   .search input {
     border: 0;
     margin-top: 20px;
@@ -107,11 +114,12 @@ body {
     background: #ebfffc;
     color: #555;
     /* padding: 10px 25px; */
-    paadding: 5px 10px;
+    padding: 5px 10px;
     height: auto;
     border-radius: 30px;
     /* flex: 1px; */
     margin-right: 16px;
+    width: 100%;
     font-size: 12px;
   }
   .search button {
@@ -122,6 +130,16 @@ body {
     border-radius: 50%;
     width: 30px;
     height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
   }
+  .card{
+    margin: 0;
+    width: 100%;
+    padding: 30px;
+    /* height: 100%; */
+  }
+
 }
