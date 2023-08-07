@@ -24,7 +24,7 @@
   </head>
 
   <body>
-    <div class="card">
+    <div class="card pb-1">
       <h1 class="name">Weather App</h1>
       <div class="search">
         <input type="text" placeholder="Enter city name" spellcheck="false" />
@@ -33,31 +33,29 @@
       <div class="error hidden">
         <p>Invalid city name</p>
       </div>
-      <div class="weather d">
-        <img src="assets/rain.png" class="weather-icon" />
-        <section class=" p-3 weather-des w-100">
+      <div class="weather  ">
+        <img src="assets/rain.png" class="weather-icon mt-0" />
+        <section class="p-3 weather-des w-100">
           <h1 class="temp">29°C</h1>
           <h2 class="city">Ibadan</h2>
-          <div class="details d-flex align-items-center justify-content-center flex-column p-4 ">
-            <div
-              class="col d-flex align-items-center justify-content-center ">
+          <div
+            class="details d-flex align-items-center justify-content-center flex-column mt-0 pt-0 p-4 pb-0">
+            <div class="col d-flex align-items-center justify-content-center">
               <div class="d-flex justify-content-center align-items-center">
-                <img src="assets/hum.svg" class="mt-2" />
-
-                <p class="humidity m-0 p-0 details-font">50%</p>
+                <img src="assets/hum.svg" class="m" />
+                <p class="m-0 details-font">Humidity</p>
               </div>
               <img src="assets/div.svg" class="div" alt="" />
-              <p class="m-0 details-font">Humidity</p>
+              <p class="humidity m-0 p-0 details-font">50%</p>
             </div>
-            <div class="col d-flex align-items-center  justify-content-center">
+            <div class="col d-flex align-items-center justify-content-center">
               <div class="d-flex justify-content-center align-items-center">
                 <img src="assets/windy.png" />
-
-                <p class="wind p-0 m-0 details-font">15 km/h</p>
+                <p class="m-0 p-0 details-font">Wind Speed</p>
+                
               </div>
               <img src="assets/div.svg" class="div" alt="" />
-
-              <p class="m-0 p-0 details-font">Wind Speed</p>
+              <p class="wind p-0 m-0 details-font">15 km/h</p>
             </div>
           </div>
         </section>
