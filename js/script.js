@@ -56,3 +56,51 @@ document.addEventListener("DOMContentLoaded", () => {
     updateWeather(lastCityWeather);
   }
 });
+
+// const apiUrl2 =
+//   "https://wft-geo-db.p.rapidapi.com/v1/geo/countries/US/regions/CA/cities";
+const apiUrl2 = "wft-geo-db.p.rapidapi.com";
+const apiKey2 = "e9dea959b7mshacefc397242e54cp19b33ejsna4df7b5e9c57";
+
+//fetch api
+
+// Function to fetch cities using the API key
+async function fetchCities() {
+  try {
+    const response = await fetch(apiUrl2, {
+      headers: {
+        Authorization: `Bearer ${apiKey2}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`API request failed with status: ${response.status}`);
+    }
+    console.log(response);
+    const data = await response.json();
+    return data.cities;
+    console.log(data.cities);
+    // Assuming the response contains an array of cities
+  } catch (error) {
+    console.error("Error fetching cities:", error);
+    return [];
+  }
+}
+ 
+
+// Function to display cities on the page
+// function displayCities(cities) {
+//   const cityList = document.querySelector(".city-list");
+// console.log(cityList)
+//   cities.forEach((city) => {
+//     // const cityItem = document.createElement("li");
+//     // cityItem.textContent = city.name;
+//     // cityList.appendChild(cityItem);
+//     console.log(cityList)
+//   });
+// }
+
+// // Load and display cities when the page is loaded
+document.addEventListener("DOMContentLoaded", async () => {
+  fetchCities();
+});
